@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="schedulerapiFlow" doc:id="d518e119-782d-4b9f-a42e-d9e3095fc0ed" >
+		<scheduler doc:name="Scheduler" doc:id="abf602d7-9892-453e-82eb-ec315f4df811" >
+			<scheduling-strategy >
+				<cron expression="0 0/1 * 1/1 * ? *" timeZone="10" />
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="bfe149d9-e99f-415d-b910-1532f5e36ec1" message='#["success message"]'/>
+	</flow>
+</mule>
